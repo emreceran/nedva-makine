@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nedva Makine | Endüstriyel Mutfak Makineleri Yedek Parça İmalatı</title>
+<meta name="description" content="Nedva Makine, 2007 yılından bu yana Konya'da endüstriyel mutfak makineleri için yedek parça imalatı yapmaktadır. Kasnak, mil, flanş, burç ve bağlantı parçaları.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lacivert:#16263d; --lacivert-2:#223754; --vurgu:#b5462b;
+  --metin:#2b2f36; --soluk:#5d6470; --cizgi:#dde1e6; --zemin:#f4f5f7; --beyaz:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Source Sans 3",Arial,sans-serif;color:var(--metin);background:var(--beyaz);font-size:17px;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.kap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* üst bilgi şeridi */
+.ust{background:var(--lacivert);color:#c9d1dc;font-size:14px}
+.ust .kap{display:flex;justify-content:space-between;gap:16px;padding-top:7px;padding-bottom:7px}
+.ust a:hover{color:#fff}
+
+/* başlık */
+header{background:var(--beyaz);border-bottom:1px solid var(--cizgi);position:sticky;top:0;z-index:10}
+header .kap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-size:28px;letter-spacing:3px;color:var(--lacivert);font-weight:700}
+.logo span{font-size:11px;letter-spacing:3.2px;color:var(--soluk);margin-top:5px}
+nav{display:flex;gap:30px;font-weight:600;font-size:15.5px}
+nav a{color:var(--lacivert);padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--vurgu)}
+.menu-dugme{display:none;background:none;border:1px solid var(--cizgi);padding:8px 12px;font:inherit;font-weight:600;color:var(--lacivert);cursor:pointer}
+
+/* giriş */
+.giris{background:var(--zemin);border-bottom:1px solid var(--cizgi)}
+.giris .kap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:64px;padding-bottom:64px}
+.ust-etiket{font-size:13px;font-weight:700;letter-spacing:2px;color:var(--vurgu);text-transform:uppercase;margin-bottom:14px}
+h1{font-size:42px;line-height:1.18;color:var(--lacivert);font-weight:700;margin-bottom:20px}
+.giris p{color:var(--soluk);font-size:18.5px;max-width:540px;margin-bottom:30px}
+.dugme{display:inline-block;padding:13px 26px;font-weight:600;font-size:16px;border:2px solid var(--lacivert)}
+.dugme.dolu{background:var(--lacivert);color:#fff}
+.dugme.dolu:hover{background:var(--lacivert-2)}
+.dugme.bos{color:var(--lacivert);margin-left:10px}
+.dugme.bos:hover{background:#fff}
+.giris-gorsel img{border:1px solid var(--cizgi);width:100%;height:auto}
+
+/* bilgi şeridi */
+.rakam{border-bottom:1px solid var(--cizgi)}
+.rakam .kap{display:grid;grid-template-columns:repeat(4,1fr)}
+.rakam div{padding:26px 20px;border-left:1px solid var(--cizgi)}
+.rakam div:last-child{border-right:1px solid var(--cizgi)}
+.rakam b{display:block;font-size:26px;color:var(--lacivert)}
+.rakam span{font-size:14.5px;color:var(--soluk)}
+
+/* bölümler */
+section{padding:84px 0}
+.bolum-bas{max-width:720px;margin-bottom:44px}
+h2{font-size:32px;color:var(--lacivert);line-height:1.25;margin-bottom:14px}
+.bolum-bas p{color:var(--soluk)}
+.gri{background:var(--zemin);border-top:1px solid var(--cizgi);border-bottom:1px solid var(--cizgi)}
+
+/* kurumsal */
+.kurumsal{display:grid;grid-template-columns:1.1fr .9fr;gap:56px}
+.kurumsal p{margin-bottom:16px}
+.tarihce{border-left:2px solid var(--cizgi);padding-left:28px}
+.tarihce h3{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--soluk);margin-bottom:22px}
+.olay{position:relative;margin-bottom:26px}
+.olay::before{content:"";position:absolute;left:-35px;top:7px;width:12px;height:12px;background:var(--beyaz);border:2px solid var(--vurgu)}
+.olay b{display:block;color:var(--lacivert);font-size:20px}
+.olay span{color:var(--soluk);font-size:16px}
+
+/* ürünler */
+.suzgec{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.suzgec button{font:inherit;font-size:15px;font-weight:600;padding:8px 16px;border:1px solid var(--cizgi);background:#fff;color:var(--lacivert);cursor:pointer}
+.suzgec button.secili{background:var(--lacivert);border-color:var(--lacivert);color:#fff}
+.urunler{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.urun{background:#fff;border:1px solid var(--cizgi);display:flex;flex-direction:column}
+.urun img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-bottom:1px solid var(--cizgi)}
+.urun div{padding:16px 18px 20px}
+.urun small{display:block;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--vurgu);font-weight:700;margin-bottom:4px}
+.urun h3{font-size:18px;color:var(--lacivert);line-height:1.3;margin-bottom:6px}
+.urun p{font-size:15px;color:var(--soluk);line-height:1.5}
+.not{margin-top:28px;font-size:15px;color:var(--soluk)}
+
+/* hizmetler */
+.hizmetler{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--cizgi)}
+.hizmet{padding:34px 30px;border-right:1px solid var(--cizgi)}
+.hizmet:last-child{border-right:0}
+.hizmet .no{font-size:14px;font-weight:700;color:var(--vurgu);letter-spacing:1px;margin-bottom:10px}
+.hizmet h3{font-size:20px;color:var(--lacivert);margin-bottom:10px}
+.hizmet p{color:var(--soluk);font-size:16px}
+.alanlar{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.alanlar li{list-style:none;padding:14px 16px;background:#fff;border:1px solid var(--cizgi);font-weight:600;color:var(--lacivert);font-size:15.5px}
+
+/* iletişim */
+.iletisim{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
+.satir{padding:18px 0;border-bottom:1px solid var(--cizgi)}
+.satir:first-child{padding-top:0}
+.satir small{display:block;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--soluk);font-weight:700;margin-bottom:4px}
+.satir a,.satir span{font-size:18px;color:var(--lacivert);font-weight:600}
+.satir a:hover{color:var(--vurgu)}
+.harita{border:1px solid var(--cizgi);min-height:380px}
+.harita iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+
+footer{background:var(--lacivert);color:#aab4c2;font-size:14.5px}
+footer .kap{display:flex;justify-content:space-between;gap:16px;padding-top:26px;padding-bottom:26px}
+footer b{color:#fff;letter-spacing:2px}
+
+@media (max-width:980px){
+  .urunler{grid-template-columns:repeat(3,1fr)}
+  .giris .kap,.kurumsal,.iletisim{grid-template-columns:1fr}
+  .rakam .kap{grid-template-columns:repeat(2,1fr)}
+  .rakam .kap{padding:0}
+  .rakam div{border-bottom:1px solid var(--cizgi);border-right:0!important}
+  .rakam div:nth-child(odd){border-left:0}
+  .alanlar{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .kap{padding:0 16px}
+  .ust .adres{display:none}
+  nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--cizgi)}
+  nav.acik{display:flex}
+  nav a{padding:14px 16px;border-bottom:1px solid var(--cizgi)}
+  .menu-dugme{display:block}
+  h1{font-size:31px}
+  h2{font-size:26px}
+  section{padding:56px 0}
+  .giris .kap{padding-top:40px;padding-bottom:44px;gap:32px}
+  .urunler{grid-template-columns:repeat(2,1fr);gap:12px}
+  .urun div{padding:12px 12px 14px}
+  .urun h3{font-size:16px}
+  .urun p{font-size:14px}
+  .hizmetler{grid-template-columns:1fr}
+  .hizmet{border-right:0;border-bottom:1px solid var(--cizgi)}
+  .hizmet:last-child{border-bottom:0}
+  .dugme.bos{margin-left:0;margin-top:10px}
+  footer .kap{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<div class="ust">
+  <div class="kap">
+    <span class="adres">Atiker 2 Sanayi Sitesi, Karatay / Konya</span>
+    <a href="tel:+905442393754">0544 239 37 54</a>
+  </div>
+</div>
+
+<header>
+  <div class="kap">
+    <a href="#" class="logo" aria-label="Nedva Makine ana sayfa"><b>NEDVA</b><span>MAKİNE</span></a>
+    <button class="menu-dugme" aria-label="Menü" onclick="document.querySelector('nav').classList.toggle('acik')">Menü</button>
+    <nav onclick="this.classList.remove('acik')">
+      <a href="#kurumsal">Kurumsal</a>
+      <a href="#urunler">Ürünler</a>
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<div class="giris">
+  <div class="kap">
+    <div>
+      <div class="ust-etiket">2007'den bu yana</div>
+      <h1>Endüstriyel mutfak makineleri için yedek parça imalatı</h1>
+      <p>Nedva Makine, endüstriyel mutfak makinelerinde kullanılan kasnak, mil, flanş, burç ve bağlantı parçalarını numune veya teknik resim üzerinden imal etmektedir.</p>
+      <a class="dugme dolu" href="#urunler">Ürünlerimiz</a>
+      <a class="dugme bos" href="#iletisim">Teklif İsteyin</a>
+    </div>
+    <div class="giris-gorsel"><img src="img/giris.jpg" alt="Nedva Makine imalatı kasnak ve flanş parçaları" width="1500" height="1100"></div>
+  </div>
+</div>
+
+<div class="rakam">
+  <div class="kap">
+    <div><b>2007</b><span>Kuruluş yılı</span></div>
+    <div><b>Konya</b><span>Karatay, Atiker 2 Sanayi Sitesi</span></div>
+    <div><b>Yedek Parça</b><span>Endüstriyel mutfak makineleri</span></div>
+    <div><b>Özel İmalat</b><span>Numune ve teknik resimden</span></div>
+  </div>
+</div>
+
+<section id="kurumsal">
+  <div class="kap kurumsal">
+    <div>
+      <div class="ust-etiket">Kurumsal</div>
+      <h2>Hakkımızda</h2>
+      <p>Nedva Makine, 2007 yılında Konya'da endüstriyel mutfak makinelerine yedek parça imal etmek amacıyla kurulmuştur.</p>
+      <p>Firmamız; mutfak makinesi üreticileri, teknik servisler ve işletmeler için makinelerin tahrik, yataklama ve bağlantı sistemlerinde kullanılan parçaları üretmektedir. Piyasada temin edilemeyen veya üretimi durmuş parçalar, mevcut numune ölçülerek yeniden imal edilebilmektedir.</p>
+      <p>Çalışmalarımızı ölçüye uygunluk, zamanında teslim ve müşterilerimizle uzun süreli iş birliği ilkeleriyle sürdürmekteyiz.</p>
+    </div>
+    <div class="tarihce">
+      <h3>Tarihçe</h3>
+      <div class="olay"><b>2007</b><span>Nedva Makine, Konya'da kuruldu. Endüstriyel mutfak makineleri için yedek parça imalatına başlandı.</span></div>
+      <div class="olay"><b>Bugün</b><span>Karatay Atiker 2 Sanayi Sitesi'ndeki tesisimizde kasnak, mil, flanş, burç ve bağlantı parçaları imalatı sürmektedir.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="urunler" class="gri">
+  <div class="kap">
+    <div class="bolum-bas">
+      <div class="ust-etiket">Ürünler</div>
+      <h2>İmal ettiğimiz parçalardan örnekler</h2>
+      <p>Aşağıdaki parçalar firmamızda üretilmiş örneklerdir. Listede bulunmayan parçalar için numune veya teknik resim ile teklif alabilirsiniz.</p>
+    </div>
+    <div class="suzgec" id="suzgec"></div>
+    <div class="urunler" id="liste"></div>
+    <p class="not">Ölçü, malzeme ve adet bilgisi ile birlikte iletilen talepler için fiyat ve termin bilgisi verilmektedir.</p>
+  </div>
+</section>
+
+<section id="hizmetler">
+  <div class="kap">
+    <div class="bolum-bas">
+      <div class="ust-etiket">Hizmetler</div>
+      <h2>Çalışma şeklimiz</h2>
+      <p>Tek parçadan seri üretime kadar, ihtiyaç duyulan parçayı ölçüsüne uygun olarak imal ediyoruz.</p>
+    </div>
+    <div class="hizmetler">
+      <div class="hizmet"><div class="no">01</div><h3>Numuneden imalat</h3><p>Aşınmış veya kırılmış parçanın ölçüleri alınarak aynı ölçülerde yeni parça üretilir.</p></div>
+      <div class="hizmet"><div class="no">02</div><h3>Teknik resimden imalat</h3><p>Müşteriden gelen teknik resim veya çizime göre parça imal edilir.</p></div>
+      <div class="hizmet"><div class="no">03</div><h3>Seri üretim</h3><p>Makine üreticileri ve servisler için düzenli ihtiyaç duyulan parçalar seri olarak üretilir.</p></div>
+    </div>
+    <ul class="alanlar">
+      <li>Hamur yoğurma makineleri</li>
+      <li>Mikser ve karıştırıcılar</li>
+      <li>Patates soyma makineleri</li>
+      <li>Bulaşık makineleri</li>
+      <li>Et ve sebze işleme makineleri</li>
+      <li>Gazlı pişirme cihazları</li>
+      <li>Fırın ve buharlı pişiriciler</li>
+      <li>Diğer endüstriyel mutfak ekipmanları</li>
+    </ul>
+  </div>
+</section>
+
+<section id="iletisim" class="gri">
+  <div class="kap">
+    <div class="bolum-bas">
+      <div class="ust-etiket">İletişim</div>
+      <h2>Bize ulaşın</h2>
+      <p>Parça talepleriniz için telefonla arayabilir veya WhatsApp üzerinden parça fotoğrafı ve ölçülerini gönderebilirsiniz.</p>
+    </div>
+    <div class="iletisim">
+      <div>
+        <div class="satir"><small>Telefon</small><a href="tel:+905442393754">0544 239 37 54</a></div>
+        <div class="satir"><small>WhatsApp</small><a href="https://wa.me/905442393754" target="_blank" rel="noopener">Mesaj gönderin</a></div>
+        <div class="satir"><small>Adres</small><span>Fevziçakmak Mah. 10761 Sok.<br>Atiker 2 Sanayi Sitesi No: 2/0<br>42050 Karatay / Konya</span></div>
+        <div class="satir"><small>Yol tarifi</small><a href="https://www.google.com/maps/search/?api=1&query=Nedva+Makine+Karatay+Konya" target="_blank" rel="noopener">Google Haritalar'da açın</a></div>
+      </div>
+      <div class="harita">
+        <iframe title="Nedva Makine konumu" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Nedva%20Makine%2C%20Atiker%202%20Sanayi%20Sitesi%2C%20Karatay%2C%20Konya&z=15&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="kap">
+    <span><b>NEDVA MAKİNE</b> &nbsp;·&nbsp; Endüstriyel mutfak makineleri yedek parça imalatı</span>
+    <span>© <span id="yil">2026</span> Nedva Makine. Tüm hakları saklıdır.</span>
+  </div>
+</footer>
+
+<script>
+var URUNLER = [
+  {g:"10", k:"Kasnaklar", ad:"Poly-V kasnak", acik:"Kanallı kayış ile motor hareketini makineye aktarır. Hamur yoğurma ve mikser tahrik sistemlerinde kullanılır."},
+  {g:"01", k:"Kasnaklar", ad:"Flanşlı Poly-V kasnak", acik:"Göbeğe cıvata ile bağlanan flanşlı kasnak. Kazan ve karıştırıcı tahrikinde kullanılır."},
+  {g:"04", k:"Flanş ve Göbekler", ad:"Altı kollu tahrik flanşı", acik:"Döner tabla veya disk ile tahrik mili arasındaki bağlantıyı sağlar. Patates soyma ve sebze işleme makinelerinde kullanılır."},
+  {g:"02", k:"Flanş ve Göbekler", ad:"Altı kollu tahrik flanşı (üst görünüm)", acik:"Merkezi dişli bağlantılı, kubbe gövdeli flanş. Döner tabla bağlantılarında kullanılır."},
+  {g:"05", k:"Flanş ve Göbekler", ad:"Yatak flanşı, siyah eloksal", acik:"Mil ve rulmanı gövdeye bağlayan yataklama flanşı. Alüminyum, siyah eloksal kaplı."},
+  {g:"13", k:"Flanş ve Göbekler", ad:"Motor bağlantı plakası, siyah eloksal", acik:"Motor veya redüktörün makine gövdesine montajında kullanılan bağlantı plakası."},
+  {g:"08", k:"Miller", ad:"Tahrik mili", acik:"İki ucu dişli, kademeli tahrik mili. Hareketi motor tarafından çalışma bölümüne iletir."},
+  {g:"12", k:"Miller", ad:"Bağlantı mili", acik:"Uçları işlenmiş, dişli bağlantılı ara mil. Karıştırıcı ve aparat bağlantılarında kullanılır."},
+  {g:"07", k:"Miller", ad:"Rulmanlı makara mili", acik:"Rulman ile birlikte montajlı dişli mil. Kayış gergi ve avara makarası olarak kullanılır."},
+  {g:"06", k:"Burç ve Yuvalar", ad:"Burç ve yuva seti", acik:"Mil geçişlerinde yataklama ve sızdırmazlık elemanlarının yerleştiği burç ve yuva takımı."},
+  {g:"09", k:"Burç ve Yuvalar", ad:"Rulman / keçe yuvası", acik:"Rulman veya keçenin oturduğu, hassas tornalanmış çelik yuva halkası."},
+  {g:"03", k:"Bağlantı Parçaları", ad:"Su dağıtım bloğu", acik:"Dişli çıkışlı alüminyum blok. Bulaşık makinesi ve buharlı pişiricilerde su hattı bağlantısında kullanılır."},
+  {g:"11", k:"Bağlantı Parçaları", ad:"Gaz memesi", acik:"Pirinç gaz memesi ve rakor. Ocak ve gazlı pişirme cihazlarının brülörlerinde kullanılır."}
+];
+(function(){
+  var liste=document.getElementById('liste'), suz=document.getElementById('suzgec');
+  var kats=["Tümü"]; URUNLER.forEach(function(u){ if(kats.indexOf(u.k)<0) kats.push(u.k); });
+  function ciz(k){
+    liste.innerHTML=URUNLER.filter(function(u){return k==="Tümü"||u.k===k;}).map(function(u){
+      return '<article class="urun"><img src="img/'+u.g+'.jpg" alt="'+u.ad+'" width="1000" height="1000" loading="lazy"><div><small>'+u.k+'</small><h3>'+u.ad+'</h3><p>'+u.acik+'</p></div></article>';
+    }).join('');
+    [].forEach.call(suz.children,function(b){b.classList.toggle('secili',b.textContent===k);});
+  }
+  kats.forEach(function(k){var b=document.createElement('button');b.type='button';b.textContent=k;b.onclick=function(){ciz(k);};suz.appendChild(b);});
+  ciz("Tümü");
+  document.getElementById('yil').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

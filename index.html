@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nedva Makine | Endüstriyel Mutfak Makineleri Yedek Parça İmalatı</title>
-<meta name="description" content="Nedva Makine, 2007 yılından bu yana Konya'da endüstriyel mutfak makineleri için yedek parça imalatı yapmaktadır. Kasnak, mil, flanş, burç ve bağlantı parçaları.">
+<title>Nedva Makine | Fason Parça ve Yedek Parça İmalatı, Konya</title>
+<meta name="description" content="Nedva Makine, 2007 yılından bu yana Konya'da otomotiv yedek parçaları, makine üreticilerine özel parçalar ve endüstriyel mutfak makineleri yedek parçalarının imalatını yapmaktadır.">
+<link rel="icon" type="image/png" href="img/ikon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -28,9 +29,9 @@ img{display:block;max-width:100%}
 /* başlık */
 header{background:var(--beyaz);border-bottom:1px solid var(--cizgi);position:sticky;top:0;z-index:10}
 header .kap{display:flex;align-items:center;justify-content:space-between;height:76px}
-.logo{display:flex;flex-direction:column;line-height:1}
-.logo b{font-size:28px;letter-spacing:3px;color:var(--lacivert);font-weight:700}
-.logo span{font-size:11px;letter-spacing:3.2px;color:var(--soluk);margin-top:5px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{height:34px;width:auto}
+.logo span{font-size:12px;letter-spacing:3.5px;color:var(--soluk);font-weight:600;border-left:1px solid var(--cizgi);padding-left:12px;line-height:34px}
 nav{display:flex;gap:30px;font-weight:600;font-size:15.5px}
 nav a{color:var(--lacivert);padding:6px 0;border-bottom:2px solid transparent}
 nav a:hover{border-color:var(--vurgu)}
@@ -74,6 +75,30 @@ h2{font-size:32px;color:var(--lacivert);line-height:1.25;margin-bottom:14px}
 .olay b{display:block;color:var(--lacivert);font-size:20px}
 .olay span{color:var(--soluk);font-size:16px}
 
+/* faaliyet alanları */
+.faaliyet{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.alan{background:#fff;border:1px solid var(--cizgi);border-top:3px solid var(--lacivert);padding:30px 28px}
+.alan .no{font-size:14px;font-weight:700;color:var(--vurgu);letter-spacing:1px;margin-bottom:10px}
+.alan h3{font-size:21px;color:var(--lacivert);line-height:1.3;margin-bottom:12px}
+.alan p{color:var(--soluk);font-size:16px;margin-bottom:12px}
+.alan ul{list-style:none;border-top:1px solid var(--cizgi);padding-top:12px}
+.alan li{font-size:15px;color:var(--metin);padding:4px 0 4px 16px;position:relative}
+.alan li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:2px;background:var(--vurgu)}
+.calisma-bas{margin:64px 0 24px}
+.calisma-bas h3{font-size:22px;color:var(--lacivert)}
+
+/* isim */
+.isim{margin-top:64px;border:1px solid var(--cizgi)}
+.isim-bas{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 30px;border-bottom:1px solid var(--cizgi);background:var(--zemin)}
+.isim-bas h3{font-size:22px;color:var(--lacivert)}
+.isim-bas p{color:var(--soluk);font-size:16px;max-width:560px}
+.harfler{display:grid;grid-template-columns:repeat(5,1fr)}
+.harf{padding:26px 22px;border-right:1px solid var(--cizgi);text-align:center}
+.harf:last-child{border-right:0}
+.harf b{display:block;font-size:46px;line-height:1;color:var(--lacivert);font-weight:700;margin-bottom:10px}
+.harf span{font-weight:600;color:var(--metin);font-size:16px}
+.harf small{display:block;color:var(--soluk);font-size:14px}
+
 /* ürünler */
 .suzgec{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
 .suzgec button{font:inherit;font-size:15px;font-weight:600;padding:8px 16px;border:1px solid var(--cizgi);background:#fff;color:var(--lacivert);cursor:pointer}
@@ -109,7 +134,7 @@ h2{font-size:32px;color:var(--lacivert);line-height:1.25;margin-bottom:14px}
 
 footer{background:var(--lacivert);color:#aab4c2;font-size:14.5px}
 footer .kap{display:flex;justify-content:space-between;gap:16px;padding-top:26px;padding-bottom:26px}
-footer b{color:#fff;letter-spacing:2px}
+footer img{height:22px;width:auto;margin-bottom:8px;display:block}
 
 @media (max-width:980px){
   .urunler{grid-template-columns:repeat(3,1fr)}
@@ -119,6 +144,8 @@ footer b{color:#fff;letter-spacing:2px}
   .rakam div{border-bottom:1px solid var(--cizgi);border-right:0!important}
   .rakam div:nth-child(odd){border-left:0}
   .alanlar{grid-template-columns:repeat(2,1fr)}
+  .faaliyet{grid-template-columns:1fr}
+  .isim-bas{flex-direction:column;align-items:flex-start}
 }
 @media (max-width:760px){
   body{font-size:16px}
@@ -137,6 +164,11 @@ footer b{color:#fff;letter-spacing:2px}
   .urun h3{font-size:16px}
   .urun p{font-size:14px}
   .hizmetler{grid-template-columns:1fr}
+  .harfler{grid-template-columns:1fr}
+  .harf{border-right:0;border-bottom:1px solid var(--cizgi);display:flex;align-items:center;gap:18px;text-align:left;padding:14px 18px}
+  .harf b{font-size:32px;margin:0;width:30px}
+  .logo img{height:28px}
+  .logo span{line-height:28px}
   .hizmet{border-right:0;border-bottom:1px solid var(--cizgi)}
   .hizmet:last-child{border-bottom:0}
   .dugme.bos{margin-left:0;margin-top:10px}
@@ -155,12 +187,12 @@ footer b{color:#fff;letter-spacing:2px}
 
 <header>
   <div class="kap">
-    <a href="#" class="logo" aria-label="Nedva Makine ana sayfa"><b>NEDVA</b><span>MAKİNE</span></a>
+    <a href="#" class="logo" aria-label="Nedva Makine ana sayfa"><img src="img/logo.png" alt="NEDVA" width="922" height="230"><span>MAKİNE</span></a>
     <button class="menu-dugme" aria-label="Menü" onclick="document.querySelector('nav').classList.toggle('acik')">Menü</button>
     <nav onclick="this.classList.remove('acik')">
       <a href="#kurumsal">Kurumsal</a>
+      <a href="#faaliyet">Faaliyet Alanları</a>
       <a href="#urunler">Ürünler</a>
-      <a href="#hizmetler">Hizmetler</a>
       <a href="#iletisim">İletişim</a>
     </nav>
   </div>
@@ -170,9 +202,9 @@ footer b{color:#fff;letter-spacing:2px}
   <div class="kap">
     <div>
       <div class="ust-etiket">2007'den bu yana</div>
-      <h1>Endüstriyel mutfak makineleri için yedek parça imalatı</h1>
-      <p>Nedva Makine, endüstriyel mutfak makinelerinde kullanılan kasnak, mil, flanş, burç ve bağlantı parçalarını numune veya teknik resim üzerinden imal etmektedir.</p>
-      <a class="dugme dolu" href="#urunler">Ürünlerimiz</a>
+      <h1>Fason parça ve yedek parça imalatı</h1>
+      <p>Nedva Makine; otomotiv yedek parçaları, makine üreticilerine özel parçalar ve endüstriyel mutfak makineleri yedek parçalarını numune veya teknik resim üzerinden imal etmektedir.</p>
+      <a class="dugme dolu" href="#faaliyet">Faaliyet Alanlarımız</a>
       <a class="dugme bos" href="#iletisim">Teklif İsteyin</a>
     </div>
     <div class="giris-gorsel"><img src="img/giris.jpg" alt="Nedva Makine imalatı kasnak ve flanş parçaları" width="1500" height="1100"></div>
@@ -183,8 +215,8 @@ footer b{color:#fff;letter-spacing:2px}
   <div class="kap">
     <div><b>2007</b><span>Kuruluş yılı</span></div>
     <div><b>Konya</b><span>Karatay, Atiker 2 Sanayi Sitesi</span></div>
+    <div><b>Fason İmalat</b><span>Otomotiv ve makine sektörü</span></div>
     <div><b>Yedek Parça</b><span>Endüstriyel mutfak makineleri</span></div>
-    <div><b>Özel İmalat</b><span>Numune ve teknik resimden</span></div>
   </div>
 </div>
 
@@ -193,19 +225,60 @@ footer b{color:#fff;letter-spacing:2px}
     <div>
       <div class="ust-etiket">Kurumsal</div>
       <h2>Hakkımızda</h2>
-      <p>Nedva Makine, 2007 yılında Konya'da endüstriyel mutfak makinelerine yedek parça imal etmek amacıyla kurulmuştur.</p>
-      <p>Firmamız; mutfak makinesi üreticileri, teknik servisler ve işletmeler için makinelerin tahrik, yataklama ve bağlantı sistemlerinde kullanılan parçaları üretmektedir. Piyasada temin edilemeyen veya üretimi durmuş parçalar, mevcut numune ölçülerek yeniden imal edilebilmektedir.</p>
+      <p>Nedva Makine, 2007 yılında Konya'da kurulmuştur. Firmamız otomotiv yedek parçalarının fason imalatı, makine üreticilerine özel parçaların fason imalatı ve endüstriyel mutfak makineleri yedek parça imalatı alanlarında faaliyet göstermektedir.</p>
+      <p>Müşterilerimizin numune, teknik resim veya ölçü bilgilerine göre tahrik, yataklama ve bağlantı sistemlerinde kullanılan parçaları imal ediyoruz. Piyasada temin edilemeyen veya üretimi durmuş parçalar, mevcut numune ölçülerek yeniden üretilebilmektedir.</p>
       <p>Çalışmalarımızı ölçüye uygunluk, zamanında teslim ve müşterilerimizle uzun süreli iş birliği ilkeleriyle sürdürmekteyiz.</p>
     </div>
     <div class="tarihce">
       <h3>Tarihçe</h3>
       <div class="olay"><b>2007</b><span>Nedva Makine, Konya'da kuruldu. Endüstriyel mutfak makineleri için yedek parça imalatına başlandı.</span></div>
-      <div class="olay"><b>Bugün</b><span>Karatay Atiker 2 Sanayi Sitesi'ndeki tesisimizde kasnak, mil, flanş, burç ve bağlantı parçaları imalatı sürmektedir.</span></div>
+      <div class="olay"><b>Bugün</b><span>Karatay Atiker 2 Sanayi Sitesi'ndeki tesisimizde otomotiv, makine imalatı ve endüstriyel mutfak sektörlerine yönelik parça imalatı sürmektedir.</span></div>
+    </div>
+  </div>
+  <div class="kap"><div class="isim">
+      <div class="isim-bas">
+        <h3>NEDVA adı nereden gelir?</h3>
+        <p>Firma adımız, Ahilik geleneğinde esnafta aranan beş özelliğin baş harflerinden oluşur. Cömertlik, tevazu ve doğruya yönelme anlayışını işimizin temeli olarak kabul ediyoruz.</p>
+      </div>
+      <div class="harfler">
+        <div class="harf"><b>N</b><div><span>Nasihat</span><small>Samimiyet</small></div></div>
+        <div class="harf"><b>E</b><div><span>Emniyet</span></div></div>
+        <div class="harf"><b>D</b><div><span>Doğruluk</span></div></div>
+        <div class="harf"><b>V</b><div><span>Vefa</span></div></div>
+        <div class="harf"><b>A</b><div><span>Affedicilik</span></div></div>
+      </div>
+    </div></div>
+</section>
+
+<section id="faaliyet" class="gri">
+  <div class="kap">
+    <div class="bolum-bas">
+      <div class="ust-etiket">Faaliyet Alanları</div>
+      <h2>Üç alanda parça imalatı yapıyoruz</h2>
+      <p>Tek parçadan seri üretime kadar, ihtiyaç duyulan parçayı numune veya teknik resme uygun olarak imal ediyoruz.</p>
+    </div>
+    <div class="faaliyet">
+      <div class="alan"><div class="no">01</div><h3>Otomotiv yedek parçalarının fason imalatı</h3>
+        <p>Otomotiv yan sanayi ve yedek parça firmaları için teknik resim veya numuneye göre fason parça imalatı.</p>
+        <ul><li>Mil, burç ve kasnaklar</li><li>Flanş ve bağlantı parçaları</li><li>Tekil ve seri üretim</li></ul></div>
+      <div class="alan"><div class="no">02</div><h3>Makine imalatçılarına özel parçaların fason imalatı</h3>
+        <p>Makine üreten firmaların kendi tasarımlarına ait, firmaya özel parçaların fason imalatı.</p>
+        <ul><li>Teknik resme göre imalat</li><li>Montaj ve bağlantı plakaları</li><li>Yataklama ve tahrik parçaları</li></ul></div>
+      <div class="alan"><div class="no">03</div><h3>Endüstriyel mutfak makineleri yedek parça imalatı</h3>
+        <p>Endüstriyel mutfak makinelerinde kullanılan yedek parçaların imalatı; üretimi durmuş parçaların numuneden yeniden üretimi.</p>
+        <ul><li>Hamur yoğurma ve mikser makineleri</li><li>Patates soyma, et ve sebze işleme makineleri</li><li>Bulaşık makineleri ve pişirme cihazları</li></ul></div>
+    </div>
+    <div class="calisma-bas"><h3>Çalışma şeklimiz</h3></div>
+    <div class="hizmetler">
+      <div class="hizmet"><div class="no">01</div><h3>Numuneden imalat</h3><p>Aşınmış veya kırılmış parçanın ölçüleri alınarak aynı ölçülerde yeni parça üretilir.</p></div>
+      <div class="hizmet"><div class="no">02</div><h3>Teknik resimden imalat</h3><p>Müşteriden gelen teknik resim veya çizime göre parça imal edilir.</p></div>
+      <div class="hizmet"><div class="no">03</div><h3>Seri üretim</h3><p>Düzenli ihtiyaç duyulan parçalar, belirlenen adet ve termin planına göre seri olarak üretilir.</p></div>
     </div>
   </div>
 </section>
 
-<section id="urunler" class="gri">
+
+<section id="urunler">
   <div class="kap">
     <div class="bolum-bas">
       <div class="ust-etiket">Ürünler</div>
@@ -215,31 +288,6 @@ footer b{color:#fff;letter-spacing:2px}
     <div class="suzgec" id="suzgec"></div>
     <div class="urunler" id="liste"></div>
     <p class="not">Ölçü, malzeme ve adet bilgisi ile birlikte iletilen talepler için fiyat ve termin bilgisi verilmektedir.</p>
-  </div>
-</section>
-
-<section id="hizmetler">
-  <div class="kap">
-    <div class="bolum-bas">
-      <div class="ust-etiket">Hizmetler</div>
-      <h2>Çalışma şeklimiz</h2>
-      <p>Tek parçadan seri üretime kadar, ihtiyaç duyulan parçayı ölçüsüne uygun olarak imal ediyoruz.</p>
-    </div>
-    <div class="hizmetler">
-      <div class="hizmet"><div class="no">01</div><h3>Numuneden imalat</h3><p>Aşınmış veya kırılmış parçanın ölçüleri alınarak aynı ölçülerde yeni parça üretilir.</p></div>
-      <div class="hizmet"><div class="no">02</div><h3>Teknik resimden imalat</h3><p>Müşteriden gelen teknik resim veya çizime göre parça imal edilir.</p></div>
-      <div class="hizmet"><div class="no">03</div><h3>Seri üretim</h3><p>Makine üreticileri ve servisler için düzenli ihtiyaç duyulan parçalar seri olarak üretilir.</p></div>
-    </div>
-    <ul class="alanlar">
-      <li>Hamur yoğurma makineleri</li>
-      <li>Mikser ve karıştırıcılar</li>
-      <li>Patates soyma makineleri</li>
-      <li>Bulaşık makineleri</li>
-      <li>Et ve sebze işleme makineleri</li>
-      <li>Gazlı pişirme cihazları</li>
-      <li>Fırın ve buharlı pişiriciler</li>
-      <li>Diğer endüstriyel mutfak ekipmanları</li>
-    </ul>
   </div>
 </section>
 
@@ -267,7 +315,7 @@ footer b{color:#fff;letter-spacing:2px}
 
 <footer>
   <div class="kap">
-    <span><b>NEDVA MAKİNE</b> &nbsp;·&nbsp; Endüstriyel mutfak makineleri yedek parça imalatı</span>
+    <span><img src="img/logo-beyaz.png" alt="NEDVA" width="922" height="230">Fason parça ve yedek parça imalatı · Karatay / Konya</span>
     <span>© <span id="yil">2026</span> Nedva Makine. Tüm hakları saklıdır.</span>
   </div>
 </footer>
